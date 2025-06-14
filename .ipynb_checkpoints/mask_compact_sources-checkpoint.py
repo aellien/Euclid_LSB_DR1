@@ -12,7 +12,7 @@ from astropy.visualization.mpl_normalize import ImageNormalize
 from dawis import sample_noise, inpaint_with_gaussian_noise
 
 
-path_data = '/home/aellien/Euclid_LSB_DR1/data/'
+path_data = '/home/aellien/Euclid_LSB_DR1/data/EUC_EDF_N_bin4_10k2/'
 path_analysis = '/home/aellien/Euclid_LSB_DR1/analysis/'
     
 #image_list = ['EUC_VIS_LSB_ObsID_2688_scaled.fits',
