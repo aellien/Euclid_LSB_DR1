@@ -7,13 +7,13 @@ from datetime import datetime
 
 indir = '/n03data/ellien/Euclid_LSB_DR1/data/EUC_EDF_N_bin4_2.5k2'
 infile = sys.argv[1]
-outdir = '/n03data/ellien/Euclid_LSB_DR1/wavelets/out1'
+outdir = '/n08data/ellien/Euclid_LSB_DR1/wavelets/out1'
 
 if os.path.isdir( outdir ) == False:
     os.makedirs( outdir, exist_ok = True )
     
-tau = 0.1   # Relative Threshold
-gamma = 0.5   # Attenuation (CLEAN) factor
+tau = 0.5   # Relative Threshold
+gamma = 0.2   # Attenuation (CLEAN) factor
 
 ceps = 1E-4    # Convergence value for epsilon
 scale_lvl_eps = 1 # Scale convergence value with wavelet scale
