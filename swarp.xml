@@ -16,23 +16,23 @@
   <PARAM name="Soft_Auth" datatype="char" arraysize="*" ucd="meta.bib.author;meta.software" value="Emmanuel Bertin"/>
   <PARAM name="Soft_Ref" datatype="char" arraysize="*" ucd="meta.bib.bibcode;meta.software" value="2002ASPC..281..228B"/>
   <PARAM name="NThreads" datatype="int" ucd="meta.number;meta.software" value="20"/>
-  <PARAM name="Date" datatype="char" arraysize="*" ucd="time.event.end;meta.software" value="2025-06-09"/>
-  <PARAM name="Time" datatype="char" arraysize="*" ucd="time.event.end;meta.software" value="23:18:19"/>
-  <PARAM name="Duration" datatype="float" ucd="time.event;meta.software" value="0.25" unit="s"/>
+  <PARAM name="Date" datatype="char" arraysize="*" ucd="time.event.end;meta.software" value="2025-06-16"/>
+  <PARAM name="Time" datatype="char" arraysize="*" ucd="time.event.end;meta.software" value="11:11:30"/>
+  <PARAM name="Duration" datatype="float" ucd="time.event;meta.software" value="0.41" unit="s"/>
   <PARAM name="User" datatype="char" arraysize="*" ucd="meta.curation" value="aellien"/>
   <PARAM name="Host" datatype="char" arraysize="*" ucd="meta.curation" value="(null)"/>
   <PARAM name="Path" datatype="char" arraysize="*" ucd="meta.dataset" value="/home/aellien/Euclid_LSB_DR1/scripts"/>
   <PARAM name="Image_Name" datatype="char" arraysize="*" ucd="obs.image;meta.fits" value="/home/aellien/Euclid_LSB_DR1/data/IR_EDF_N/mosaic_217GHz.fits"/>
   <PARAM name="Weight_Name" datatype="char" arraysize="*" ucd="obs.image;meta.fits" value="out.weight.fits"/>
-  <PARAM name="NOverlap_Max" datatype="int" ucd="meta.number;stat.max;obs.image" value="5"/>
+  <PARAM name="NOverlap_Max" datatype="int" ucd="meta.number;stat.max;obs.image" value="6"/>
   <PARAM name="ExpTime_Max" datatype="float" ucd="time.expo;stat.max;obs.image" value="0" unit="s"/>
   <PARAM name="Gain_Max" datatype="float" ucd="instr.calib;stat.max;obs.image" value="0" unit="photon/ADU"/>
   <TABLE ID="Input_Image_Data" name="Input_Image_Data">
    <DESCRIPTION>Data gathered by SWarp for every FITS input image</DESCRIPTION>
    <!-- NFrames may be 0 if an error occurred early in the processing -->
-   <PARAM name="NFrames" datatype="int" ucd="meta.number;meta.dataset" value="10"/>
+   <PARAM name="NFrames" datatype="int" ucd="meta.number;meta.dataset" value="17"/>
    <!-- CurrFrame may differ from NFrames if an error occurred -->
-   <PARAM name="CurrFrame" datatype="int" ucd="meta.number;meta.dataset" value="10"/>
+   <PARAM name="CurrFrame" datatype="int" ucd="meta.number;meta.dataset" value="17"/>
    <FIELD name="Frame_Index" datatype="int" ucd="meta.record"/>
    <FIELD name="Image_Name" datatype="char" arraysize="*" ucd="obs.image;meta.fits"/>
    <FIELD name="Weight_Name" datatype="char" arraysize="*" ucd="obs.image;meta.fits"/>
@@ -68,92 +68,155 @@
    <DATA><TABLEDATA>
     <TR>
      <TD>1</TD><TD>/home/aellien/Euclid_LSB_DR1/data/IR_EDF_N/PLCK_C263.740+67.980/PLCKI_C263.740+67.980_217GHz.fits</TD><TD>(null)</TD><TD>F</TD><TD>(null)</TD>
-     <TD>0</TD><TD>2025-06-09</TD><TD>23:18:19</TD><TD>0.00</TD>
+     <TD>0</TD><TD>2025-06-16</TD><TD>11:11:30</TD><TD>0.00</TD>
      <TD>0.000134406</TD><TD>7.87462e-05</TD><TD>F</TD><TD>AUTO</TD><TD>128</TD><TD>3</TD><TD>0</TD>
      <TD>NONE</TD><TD>T</TD><TD>0</TD><TD>1</TD><TD>F</TD>
      <TD>0</TD><TD>50000</TD><TD>0</TD><TD>1</TD>
-     <TD>0.996478</TD><TD>263.774084 67.99773254</TD><TD>59.8927</TD><TD>0</TD><TD>2000</TD><TD>2000</TD>
+     <TD>0.996482</TD><TD>263.7740728 67.99773624</TD><TD>59.8928</TD><TD>0</TD><TD>2000</TD><TD>2000</TD>
      <TD>xy</TD>
     </TR>
     <TR>
      <TD>2</TD><TD>/home/aellien/Euclid_LSB_DR1/data/IR_EDF_N/PLCK_C264.214+66.028/PLCKI_C264.214+66.028_217GHz.fits</TD><TD>(null)</TD><TD>F</TD><TD>(null)</TD>
-     <TD>0</TD><TD>2025-06-09</TD><TD>23:18:19</TD><TD>0.00</TD>
+     <TD>0</TD><TD>2025-06-16</TD><TD>11:11:30</TD><TD>0.00</TD>
      <TD>9.07445e-05</TD><TD>8.49672e-05</TD><TD>F</TD><TD>AUTO</TD><TD>128</TD><TD>3</TD><TD>0</TD>
      <TD>NONE</TD><TD>F</TD><TD>0</TD><TD>1</TD><TD>F</TD>
      <TD>0</TD><TD>50000</TD><TD>0</TD><TD>1</TD>
-     <TD>0.998319</TD><TD>264.2509548 66.05017761</TD><TD>59.9495</TD><TD>0</TD><TD>2000</TD><TD>2000</TD>
+     <TD>0.998323</TD><TD>264.2509454 66.05017743</TD><TD>59.9496</TD><TD>0</TD><TD>2000</TD><TD>2000</TD>
      <TD>xy</TD>
     </TR>
     <TR>
      <TD>3</TD><TD>/home/aellien/Euclid_LSB_DR1/data/IR_EDF_N/PLCK_C264.580+64.102/PLCKI_C264.580+64.102_217GHz.fits</TD><TD>(null)</TD><TD>F</TD><TD>(null)</TD>
-     <TD>0</TD><TD>2025-06-09</TD><TD>23:18:19</TD><TD>0.00</TD>
+     <TD>0</TD><TD>2025-06-16</TD><TD>11:11:30</TD><TD>0.00</TD>
      <TD>9.42911e-05</TD><TD>8.97272e-05</TD><TD>F</TD><TD>AUTO</TD><TD>128</TD><TD>3</TD><TD>0</TD>
      <TD>NONE</TD><TD>F</TD><TD>0</TD><TD>1</TD><TD>F</TD>
      <TD>0</TD><TD>50000</TD><TD>0</TD><TD>1</TD>
-     <TD>0.99668</TD><TD>264.6189517 64.11642258</TD><TD>59.9014</TD><TD>0</TD><TD>2000</TD><TD>2000</TD>
+     <TD>0.996684</TD><TD>264.6189437 64.11641853</TD><TD>59.9015</TD><TD>0</TD><TD>2000</TD><TD>2000</TD>
      <TD>xy</TD>
     </TR>
     <TR>
-     <TD>4</TD><TD>/home/aellien/Euclid_LSB_DR1/data/IR_EDF_N/PLCK_C265.940+65.990/PLCKI_C265.940+65.990_217GHz.fits</TD><TD>(null)</TD><TD>F</TD><TD>(null)</TD>
-     <TD>0</TD><TD>2025-06-09</TD><TD>23:18:19</TD><TD>0.00</TD>
+     <TD>4</TD><TD>/home/aellien/Euclid_LSB_DR1/data/IR_EDF_N/PLCK_C265.261+66.390/PLCKI_C265.261+66.390_217GHz.fits</TD><TD>(null)</TD><TD>F</TD><TD>(null)</TD>
+     <TD>0</TD><TD>2025-06-16</TD><TD>11:11:30</TD><TD>0.00</TD>
+     <TD>9.03844e-05</TD><TD>8.27341e-05</TD><TD>F</TD><TD>AUTO</TD><TD>128</TD><TD>3</TD><TD>0</TD>
+     <TD>NONE</TD><TD>F</TD><TD>0</TD><TD>1</TD><TD>F</TD>
+     <TD>0</TD><TD>50000</TD><TD>0</TD><TD>1</TD>
+     <TD>0.998954</TD><TD>265.2994699 66.40950371</TD><TD>59.9683</TD><TD>0</TD><TD>2000</TD><TD>2000</TD>
+     <TD>xy</TD>
+    </TR>
+    <TR>
+     <TD>5</TD><TD>/home/aellien/Euclid_LSB_DR1/data/IR_EDF_N/PLCK_C265.312+64.433/PLCKI_C265.312+64.433_217GHz.fits</TD><TD>(null)</TD><TD>F</TD><TD>(null)</TD>
+     <TD>0</TD><TD>2025-06-16</TD><TD>11:11:30</TD><TD>0.00</TD>
+     <TD>0.000116017</TD><TD>8.22189e-05</TD><TD>F</TD><TD>AUTO</TD><TD>128</TD><TD>3</TD><TD>0</TD>
+     <TD>NONE</TD><TD>F</TD><TD>0</TD><TD>1</TD><TD>F</TD>
+     <TD>0</TD><TD>50000</TD><TD>0</TD><TD>1</TD>
+     <TD>0.997714</TD><TD>265.3494999 64.44890881</TD><TD>59.9322</TD><TD>0</TD><TD>2000</TD><TD>2000</TD>
+     <TD>xy</TD>
+    </TR>
+    <TR>
+     <TD>6</TD><TD>/home/aellien/Euclid_LSB_DR1/data/IR_EDF_N/PLCK_C265.940+65.990/PLCKI_C265.940+65.990_217GHz.fits</TD><TD>(null)</TD><TD>F</TD><TD>(null)</TD>
+     <TD>0</TD><TD>2025-06-16</TD><TD>11:11:30</TD><TD>0.00</TD>
      <TD>0.000101936</TD><TD>7.88348e-05</TD><TD>F</TD><TD>AUTO</TD><TD>128</TD><TD>3</TD><TD>0</TD>
      <TD>NONE</TD><TD>F</TD><TD>0</TD><TD>1</TD><TD>F</TD>
      <TD>0</TD><TD>50000</TD><TD>0</TD><TD>1</TD>
-     <TD>0.999315</TD><TD>265.9859067 66.00176967</TD><TD>59.9795</TD><TD>0</TD><TD>2000</TD><TD>2000</TD>
+     <TD>0.999319</TD><TD>265.9859008 66.00176948</TD><TD>59.9796</TD><TD>0</TD><TD>2000</TD><TD>2000</TD>
      <TD>xy</TD>
     </TR>
     <TR>
-     <TD>5</TD><TD>/home/aellien/Euclid_LSB_DR1/data/IR_EDF_N/PLCK_C268.980+68.100/PLCKI_C268.980+68.100_217GHz.fits</TD><TD>(null)</TD><TD>F</TD><TD>(null)</TD>
-     <TD>0</TD><TD>2025-06-09</TD><TD>23:18:19</TD><TD>0.00</TD>
+     <TD>7</TD><TD>/home/aellien/Euclid_LSB_DR1/data/IR_EDF_N/PLCK_C268.133+67.901/PLCKI_C268.133+67.901_217GHz.fits</TD><TD>(null)</TD><TD>F</TD><TD>(null)</TD>
+     <TD>0</TD><TD>2025-06-16</TD><TD>11:11:30</TD><TD>0.00</TD>
+     <TD>0.000148793</TD><TD>8.59644e-05</TD><TD>F</TD><TD>AUTO</TD><TD>128</TD><TD>3</TD><TD>0</TD>
+     <TD>NONE</TD><TD>F</TD><TD>0</TD><TD>1</TD><TD>F</TD>
+     <TD>0</TD><TD>50000</TD><TD>0</TD><TD>1</TD>
+     <TD>0.998437</TD><TD>268.1653048 67.92237563</TD><TD>59.9516</TD><TD>0</TD><TD>2000</TD><TD>2000</TD>
+     <TD>xy</TD>
+    </TR>
+    <TR>
+     <TD>8</TD><TD>/home/aellien/Euclid_LSB_DR1/data/IR_EDF_N/PLCK_C268.980+68.100/PLCKI_C268.980+68.100_217GHz.fits</TD><TD>(null)</TD><TD>F</TD><TD>(null)</TD>
+     <TD>0</TD><TD>2025-06-16</TD><TD>11:11:30</TD><TD>0.00</TD>
      <TD>0.000135229</TD><TD>9.13138e-05</TD><TD>F</TD><TD>AUTO</TD><TD>128</TD><TD>3</TD><TD>0</TD>
      <TD>NONE</TD><TD>F</TD><TD>0</TD><TD>1</TD><TD>F</TD>
      <TD>0</TD><TD>50000</TD><TD>0</TD><TD>1</TD>
-     <TD>0.998128</TD><TD>269.0238454 68.11963503</TD><TD>59.9423</TD><TD>0</TD><TD>2000</TD><TD>2000</TD>
+     <TD>0.998132</TD><TD>269.0238456 68.11963915</TD><TD>59.9425</TD><TD>0</TD><TD>2000</TD><TD>2000</TD>
      <TD>xy</TD>
     </TR>
     <TR>
-     <TD>6</TD><TD>/home/aellien/Euclid_LSB_DR1/data/IR_EDF_N/PLCK_C269.019+66.114/PLCKI_C269.019+66.114_217GHz.fits</TD><TD>(null)</TD><TD>F</TD><TD>(null)</TD>
-     <TD>0</TD><TD>2025-06-09</TD><TD>23:18:19</TD><TD>0.00</TD>
+     <TD>9</TD><TD>/home/aellien/Euclid_LSB_DR1/data/IR_EDF_N/PLCK_C269.019+66.114/PLCKI_C269.019+66.114_217GHz.fits</TD><TD>(null)</TD><TD>F</TD><TD>(null)</TD>
+     <TD>0</TD><TD>2025-06-16</TD><TD>11:11:30</TD><TD>0.00</TD>
      <TD>0.000188318</TD><TD>8.5283e-05</TD><TD>F</TD><TD>AUTO</TD><TD>128</TD><TD>3</TD><TD>0</TD>
      <TD>NONE</TD><TD>F</TD><TD>0</TD><TD>1</TD><TD>F</TD>
      <TD>0</TD><TD>50000</TD><TD>0</TD><TD>1</TD>
-     <TD>0.999991</TD><TD>269.057823 66.12887823</TD><TD>59.9996</TD><TD>0</TD><TD>2000</TD><TD>2000</TD>
+     <TD>0.999995</TD><TD>269.0578233 66.12887835</TD><TD>59.9997</TD><TD>0</TD><TD>2000</TD><TD>2000</TD>
      <TD>xy</TD>
     </TR>
     <TR>
-     <TD>7</TD><TD>/home/aellien/Euclid_LSB_DR1/data/IR_EDF_N/PLCK_C269.044+64.181/PLCKI_C269.044+64.181_217GHz.fits</TD><TD>(null)</TD><TD>F</TD><TD>(null)</TD>
-     <TD>0</TD><TD>2025-06-09</TD><TD>23:18:19</TD><TD>0.00</TD>
+     <TD>10</TD><TD>/home/aellien/Euclid_LSB_DR1/data/IR_EDF_N/PLCK_C269.044+64.181/PLCKI_C269.044+64.181_217GHz.fits</TD><TD>(null)</TD><TD>F</TD><TD>(null)</TD>
+     <TD>0</TD><TD>2025-06-16</TD><TD>11:11:30</TD><TD>0.00</TD>
      <TD>0.000118438</TD><TD>9.52534e-05</TD><TD>F</TD><TD>AUTO</TD><TD>128</TD><TD>3</TD><TD>0</TD>
      <TD>NONE</TD><TD>F</TD><TD>0</TD><TD>1</TD><TD>F</TD>
      <TD>0</TD><TD>50000</TD><TD>0</TD><TD>1</TD>
-     <TD>0.998346</TD><TD>269.0855033 64.1962394</TD><TD>59.9512</TD><TD>0</TD><TD>2000</TD><TD>2000</TD>
+     <TD>0.99835</TD><TD>269.0855036 64.19623564</TD><TD>59.9513</TD><TD>0</TD><TD>2000</TD><TD>2000</TD>
      <TD>xy</TD>
     </TR>
     <TR>
-     <TD>8</TD><TD>/home/aellien/Euclid_LSB_DR1/data/IR_EDF_N/PLCK_C273.432+64.125/PLCKI_C273.432+64.125_217GHz.fits</TD><TD>(null)</TD><TD>F</TD><TD>(null)</TD>
-     <TD>0</TD><TD>2025-06-09</TD><TD>23:18:19</TD><TD>0.00</TD>
+     <TD>11</TD><TD>/home/aellien/Euclid_LSB_DR1/data/IR_EDF_N/PLCK_C269.611+64.777/PLCKI_C269.611+64.777_217GHz.fits</TD><TD>(null)</TD><TD>F</TD><TD>(null)</TD>
+     <TD>0</TD><TD>2025-06-16</TD><TD>11:11:30</TD><TD>0.00</TD>
+     <TD>0.000208945</TD><TD>8.17486e-05</TD><TD>F</TD><TD>AUTO</TD><TD>128</TD><TD>3</TD><TD>0</TD>
+     <TD>NONE</TD><TD>F</TD><TD>0</TD><TD>1</TD><TD>F</TD>
+     <TD>0</TD><TD>50000</TD><TD>0</TD><TD>1</TD>
+     <TD>0.999185</TD><TD>269.6386275 64.79716343</TD><TD>59.9763</TD><TD>0</TD><TD>2000</TD><TD>2000</TD>
+     <TD>xy</TD>
+    </TR>
+    <TR>
+     <TD>12</TD><TD>/home/aellien/Euclid_LSB_DR1/data/IR_EDF_N/PLCK_C271.685+66.267/PLCKI_C271.685+66.267_217GHz.fits</TD><TD>(null)</TD><TD>F</TD><TD>(null)</TD>
+     <TD>0</TD><TD>2025-06-16</TD><TD>11:11:30</TD><TD>0.00</TD>
+     <TD>0.000175227</TD><TD>8.15103e-05</TD><TD>F</TD><TD>AUTO</TD><TD>128</TD><TD>3</TD><TD>0</TD>
+     <TD>NONE</TD><TD>F</TD><TD>0</TD><TD>1</TD><TD>F</TD>
+     <TD>0</TD><TD>50000</TD><TD>0</TD><TD>1</TD>
+     <TD>0.999414</TD><TD>271.7264948 66.28398042</TD><TD>59.9821</TD><TD>0</TD><TD>2000</TD><TD>2000</TD>
+     <TD>xy</TD>
+    </TR>
+    <TR>
+     <TD>13</TD><TD>/home/aellien/Euclid_LSB_DR1/data/IR_EDF_N/PLCK_C271.699+67.891/PLCKI_C271.699+67.891_217GHz.fits</TD><TD>(null)</TD><TD>F</TD><TD>(null)</TD>
+     <TD>0</TD><TD>2025-06-16</TD><TD>11:11:30</TD><TD>0.00</TD>
+     <TD>0.000125068</TD><TD>8.80138e-05</TD><TD>F</TD><TD>AUTO</TD><TD>128</TD><TD>3</TD><TD>0</TD>
+     <TD>NONE</TD><TD>F</TD><TD>0</TD><TD>1</TD><TD>F</TD>
+     <TD>0</TD><TD>50000</TD><TD>0</TD><TD>1</TD>
+     <TD>0.997963</TD><TD>271.7541234 67.90854261</TD><TD>59.9375</TD><TD>0</TD><TD>2000</TD><TD>2000</TD>
+     <TD>xy</TD>
+    </TR>
+    <TR>
+     <TD>14</TD><TD>/home/aellien/Euclid_LSB_DR1/data/IR_EDF_N/PLCK_C272.813+64.751/PLCKI_C272.813+64.751_217GHz.fits</TD><TD>(null)</TD><TD>F</TD><TD>(null)</TD>
+     <TD>0</TD><TD>2025-06-16</TD><TD>11:11:30</TD><TD>0.00</TD>
+     <TD>0.000161239</TD><TD>9.45125e-05</TD><TD>F</TD><TD>AUTO</TD><TD>128</TD><TD>3</TD><TD>0</TD>
+     <TD>NONE</TD><TD>F</TD><TD>0</TD><TD>1</TD><TD>F</TD>
+     <TD>0</TD><TD>50000</TD><TD>0</TD><TD>1</TD>
+     <TD>0.998</TD><TD>272.8436933 64.7644953</TD><TD>59.9404</TD><TD>0</TD><TD>2000</TD><TD>2000</TD>
+     <TD>xy</TD>
+    </TR>
+    <TR>
+     <TD>15</TD><TD>/home/aellien/Euclid_LSB_DR1/data/IR_EDF_N/PLCK_C273.432+64.125/PLCKI_C273.432+64.125_217GHz.fits</TD><TD>(null)</TD><TD>F</TD><TD>(null)</TD>
+     <TD>0</TD><TD>2025-06-16</TD><TD>11:11:30</TD><TD>0.00</TD>
      <TD>0.000133789</TD><TD>9.39064e-05</TD><TD>F</TD><TD>AUTO</TD><TD>128</TD><TD>3</TD><TD>0</TD>
      <TD>NONE</TD><TD>F</TD><TD>0</TD><TD>1</TD><TD>F</TD>
      <TD>0</TD><TD>50000</TD><TD>0</TD><TD>1</TD>
-     <TD>0.996613</TD><TD>273.4602263 64.14169831</TD><TD>59.8993</TD><TD>0</TD><TD>2000</TD><TD>2000</TD>
+     <TD>0.996617</TD><TD>273.4602348 64.14169431</TD><TD>59.8994</TD><TD>0</TD><TD>2000</TD><TD>2000</TD>
      <TD>xy</TD>
     </TR>
     <TR>
-     <TD>9</TD><TD>/home/aellien/Euclid_LSB_DR1/data/IR_EDF_N/PLCK_C273.873+66.075/PLCKI_C273.873+66.075_217GHz.fits</TD><TD>(null)</TD><TD>F</TD><TD>(null)</TD>
-     <TD>0</TD><TD>2025-06-09</TD><TD>23:18:19</TD><TD>0.00</TD>
+     <TD>16</TD><TD>/home/aellien/Euclid_LSB_DR1/data/IR_EDF_N/PLCK_C273.873+66.075/PLCKI_C273.873+66.075_217GHz.fits</TD><TD>(null)</TD><TD>F</TD><TD>(null)</TD>
+     <TD>0</TD><TD>2025-06-16</TD><TD>11:11:30</TD><TD>0.00</TD>
      <TD>0.000139814</TD><TD>7.4122e-05</TD><TD>F</TD><TD>AUTO</TD><TD>128</TD><TD>3</TD><TD>0</TD>
      <TD>NONE</TD><TD>F</TD><TD>0</TD><TD>1</TD><TD>F</TD>
      <TD>0</TD><TD>50000</TD><TD>0</TD><TD>1</TD>
-     <TD>0.998158</TD><TD>273.9122468 66.09008486</TD><TD>59.9445</TD><TD>0</TD><TD>2000</TD><TD>2000</TD>
+     <TD>0.998162</TD><TD>273.9122569 66.09008474</TD><TD>59.9446</TD><TD>0</TD><TD>2000</TD><TD>2000</TD>
      <TD>xy</TD>
     </TR>
     <TR>
-     <TD>10</TD><TD>/home/aellien/Euclid_LSB_DR1/data/IR_EDF_N/PLCK_C274.240+68.010/PLCKI_C274.240+68.010_217GHz.fits</TD><TD>(null)</TD><TD>F</TD><TD>(null)</TD>
-     <TD>0</TD><TD>2025-06-09</TD><TD>23:18:19</TD><TD>0.00</TD>
+     <TD>17</TD><TD>/home/aellien/Euclid_LSB_DR1/data/IR_EDF_N/PLCK_C274.240+68.010/PLCKI_C274.240+68.010_217GHz.fits</TD><TD>(null)</TD><TD>F</TD><TD>(null)</TD>
+     <TD>0</TD><TD>2025-06-16</TD><TD>11:11:30</TD><TD>0.00</TD>
      <TD>0.000103487</TD><TD>8.9353e-05</TD><TD>F</TD><TD>AUTO</TD><TD>128</TD><TD>3</TD><TD>0</TD>
      <TD>NONE</TD><TD>F</TD><TD>0</TD><TD>1</TD><TD>F</TD>
      <TD>0</TD><TD>50000</TD><TD>0</TD><TD>1</TD>
-     <TD>0.996338</TD><TD>274.2807961 68.02439018</TD><TD>59.8889</TD><TD>0</TD><TD>2000</TD><TD>2000</TD>
+     <TD>0.996342</TD><TD>274.2808078 68.02439392</TD><TD>59.8891</TD><TD>0</TD><TD>2000</TD><TD>2000</TD>
      <TD>xy</TD>
     </TR>
    </TABLEDATA></DATA>

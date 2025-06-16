@@ -7,15 +7,15 @@ from datetime import datetime
 
 indir = '/n03data/ellien/Euclid_LSB_DR1/data/EUC_EDF_N_bin4_2.5k2'
 infile = sys.argv[1]
-outdir = '/n08data/ellien/Euclid_LSB_DR1/wavelets/out1'
+outdir = '/n08data/ellien/Euclid_LSB_DR1/wavelets/out2'
 
 if os.path.isdir( outdir ) == False:
     os.makedirs( outdir, exist_ok = True )
     
-tau = 0.5   # Relative Threshold
-gamma = 0.2   # Attenuation (CLEAN) factor
+tau = 0.05   # Relative Threshold
+gamma = 0.5   # Attenuation (CLEAN) factor
 
-ceps = 1E-4    # Convergence value for epsilon
+ceps = 1E-5    # Convergence value for epsilon
 scale_lvl_eps = 1 # Scale convergence value with wavelet scale
 max_iter = 1500      # Maximum number of iterations
 
@@ -26,14 +26,14 @@ max_span = 2    # Maximum number of wavelet scales spanned by an interscale tree
 deblend_contrast = 0.01
 lvl_deblend = 2 # Scale at which the regions of significant wavelet coefficients are deblended
 lvl_sep_big = 5     # Scale at wich mix_span, max_span & gamma are set to 1
-lvl_sep_op = 2  # Scale at which synthesis operator switch from SUM to ADJOINT
+lvl_sep_op = 5  # Scale at which synthesis operator switch from SUM to ADJOINT
 rm_gamma_for_big = True # If set to true, the attenuation factor is not applied for scales higher than lvl_sep_big
 
 extent_sep = 0.15   # Ratio n_pix/vignet under which the Haar wavelet is used for restoration
 ecc_sep = 0.9      # Eccentricity threshold over which the Haar wavelet is used for restoration
 lvl_sep_lin = -1     # Wavelet scale under which the Haar wavelet can be used for restoration
 
-n_sigmas = 5 # Threshold for detection
+n_sigmas = 3 # Threshold for detection
 inpaint_res = True # If set to true high negative value residual will be inpainted by noise
 iptd_sigma = 5  # Threshold for noise inpainted values
 
