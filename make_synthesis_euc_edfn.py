@@ -29,7 +29,7 @@ from photutils.segmentation import SourceFinder, SourceCatalog, detect_sources, 
 from photutils.background import Background2D, MedianBackground
 
 #%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-def synthesis_small_sources( oim, header, nfwp, lvl_sep, lvl_sep_max, xs, ys, kurt_filt = True, write_fits = True ):
+def synthesis_small_sources( id_tile, oim, header, nfwp, lvl_sep, lvl_sep_max, xs, ys, kurt_filt = True, write_fits = True ):
 
     # Empty arrays for models
     recim = np.zeros( (xs, ys) )
@@ -94,7 +94,7 @@ def synthesis_small_sources( oim, header, nfwp, lvl_sep, lvl_sep_max, xs, ys, ku
         hdu_res = fits.ImageHDU(oim - recim, name = 'RESIDUALS', header = header)
         hdul = fits.HDUList([ hdu, hdu_oim, hdu_recim, hdu_res ])
         hdul.writeto( nfwp + '.synth.lvl_sep.fits', overwrite = True )
-        print('wrote to %s'%(nfwp + '.synth.lvl_sep.fits'))
+        print('wrote to %s \n'%(nfwp + '.synth.lvl_sep.fits'))
         
     return None
 
@@ -138,19 +138,21 @@ if __name__ == '__main__':
     
     for cut in cutl:
 
+        id_tile = cut.split('_')[4]
         nfp = os.path.join(path_data, cut)
         hdu = fits.open(nfp)
         head = hdu[0].header
         oim = hdu[0].data
         print('Reading %s'%nfp)
 
-        nfwp = os.path.join(path_wavelets, cut[:-5])
+        nfwp = os.path.join(path_wavelets, id_tile, cut[:-5])
         
         xs, ys = oim.shape
         xc, yc = xs / 2., ys / 2.
 
         # synthesis
-        synthesis_small_sources( oim = oim, 
+        synthesis_small_sources( id_tile = id_tile,
+                                 oim = oim, 
                                  header = head, 
                                  nfwp = nfwp, 
                                  lvl_sep = lvl_sep, 
