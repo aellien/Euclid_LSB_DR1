@@ -27,10 +27,6 @@ from scipy.stats import kurtosis
 from datetime import datetime
 from photutils.segmentation import SourceFinder, SourceCatalog, detect_sources, make_2dgaussian_kernel
 from photutils.background import Background2D, MedianBackground
-from cosmo_calc import cosmo_calc
-from morphology import *
-from psf import *
-
 
 #%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 def synthesis_small_sources( oim, header, nfwp, lvl_sep, lvl_sep_max, xs, ys, kurt_filt = True, write_fits = True ):
