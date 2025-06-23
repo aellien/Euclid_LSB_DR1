@@ -37,7 +37,7 @@ def synthesis_small_sources( oim, header, nfwp, lvl_sep, lvl_sep_max, xs, ys, ku
     yc = ys / 2.
 
     # List of files to read
-    opath = os.path.join(nfwp, '*ol.it*.hdf5')
+    opath = nfwp + '*ol.it*.hdf5'
     opathl = glob.glob(opath)
     opathl.sort()
     print(opath)
@@ -93,8 +93,8 @@ def synthesis_small_sources( oim, header, nfwp, lvl_sep, lvl_sep_max, xs, ys, ku
         hdu_recim = fits.ImageHDU(recim, name = 'REC.', header = header)
         hdu_res = fits.ImageHDU(oim - recim, name = 'RESIDUALS', header = header)
         hdul = fits.HDUList([ hdu, hdu_oim, hdu_recim, hdu_res ])
-        hdul.writeto( os.path.join(nfwp,'.synth.lvl_sep.fits'), overwrite = True )
-        print('wrote to %s'%os.path.join(nfwp,'.synth.lvl_sep.fits'))
+        hdul.writeto( nfwp + '.synth.lvl_sep.fits', overwrite = True )
+        print('wrote to %s'%(nfwp + '.synth.lvl_sep.fits'))
         
     return None
 
@@ -150,13 +150,13 @@ if __name__ == '__main__':
         xc, yc = xs / 2., ys / 2.
 
         # synthesis
-        df = synthesis_small_sources( oim = oim, 
-                                      header = head, 
-                                      nfwp = nfwp, 
-                                      lvl_sep = lvl_sep, 
-                                      lvl_sep_max = lvl_sep_max, 
-                                      xs = xs, 
-                                      ys = ys, 
-                                      kurt_filt = kurt_filt,
-                                      write_fits = write_fits )
+        synthesis_small_sources( oim = oim, 
+                                 header = head, 
+                                 nfwp = nfwp, 
+                                 lvl_sep = lvl_sep, 
+                                 lvl_sep_max = lvl_sep_max, 
+                                 xs = xs, 
+                                 ys = ys, 
+                                 kurt_filt = kurt_filt,
+                                 write_fits = write_fits )
         
