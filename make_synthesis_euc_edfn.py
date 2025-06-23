@@ -98,7 +98,7 @@ def synthesis_small_sources( oim, header, nfwp, lvl_sep, lvl_sep_max, xs, ys, ku
         hdu_res = fits.ImageHDU(oim - recim, name = 'RESIDUALS', header = header)
         hdul = fits.HDUList([ hdu, hdu_oim, hdu_recim, hdu_res ])
         hdul.writeto( os.path.join(nfwp,'.synth.lvl_sep.fits'), overwrite = True )
-        print('wrote to %s'os.path.join(nfwp,'.synth.lvl_sep.fits'))
+        print('wrote to %s'%os.path.join(nfwp,'.synth.lvl_sep.fits'))
         
     return None
 
