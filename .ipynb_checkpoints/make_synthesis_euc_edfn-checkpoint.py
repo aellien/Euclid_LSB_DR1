@@ -155,8 +155,6 @@ if __name__ == '__main__':
                                       nfwp = nfwp, 
                                       lvl_sep = lvl_sep, 
                                       lvl_sep_max = lvl_sep_max, 
-                                      size_sep = size_sep, 
-                                      size_sep_pix = size_sep_pix,
                                       xs = xs, 
                                       ys = ys, 
                                       kurt_filt = kurt_filt,
