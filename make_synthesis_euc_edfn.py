@@ -73,7 +73,6 @@ def synthesis_small_sources( id_tile, oim, header, nfwp, lvl_sep, lvl_sep_max, x
                 if kurt_filt == True:
                     k = kurtosis(image.flatten(), fisher=True)
                     if k < 0:
-                        im_art[ x_min : x_max, y_min : y_max ] += image
                         gc.collect()
                         continue
 
