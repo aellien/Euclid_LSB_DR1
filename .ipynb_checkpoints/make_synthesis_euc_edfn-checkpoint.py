@@ -64,11 +64,15 @@ def synthesis_small_sources( id_tile, oim, header, nfwp, lvl_sep, lvl_sep_max, x
                 # Compute a few quantities
                 sx = x_max - x_min
                 sy = y_max - y_min
-                m = detect_sources(image, threshold = 0., npixels=1)
-                c = SourceCatalog(image, m)
-                xco = int(c.centroid_quad[0][1] + x_min)
-                yco = int(c.centroid_quad[0][0] + y_min)
-
+                try:
+                    m = detect_sources(image, threshold = 0., npixels=1)
+                    c = SourceCatalog(image, m)
+                    xco = int(c.centroid_quad[0][1] + x_min)
+                    yco = int(c.centroid_quad[0][0] + y_min)
+                except:
+                    xco = sx / 2. + x_min
+                    yco = sy / 2. + y_min
+                    
                 # Filter bad atoms/artifacts
                 if kurt_filt == True:
                     k = kurtosis(image.flatten(), fisher=True)
