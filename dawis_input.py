@@ -8,7 +8,7 @@ from datetime import datetime
 indir = '/n03data/ellien/Euclid_LSB_DR1/data/EUC_EDF_N_bin4_2.5k2'
 infile = sys.argv[1]
 tile_id = infile.split('_')[4]
-outdir = '/n08data/ellien/Euclid_LSB_DR1/wavelets/out2/%s/'%tile_id
+outdir = '/n08data/ellien/Euclid_LSB_DR1/wavelets/out3/%s/'%tile_id
 
 if os.path.isdir( outdir ) == False:
     os.makedirs( outdir, exist_ok = True )

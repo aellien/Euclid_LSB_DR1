@@ -3,7 +3,7 @@
 <VOTABLE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://www.ivoa.net/xml/VOTable/v1.1">
 <DESCRIPTION>produced by SWarp</DESCRIPTION>
 <!-- VOTable description at http://www.ivoa.net/Documents/latest/VOT.html -->
-<RESOURCE ID="SWarp" name="mosaic_217GHz.fits">
+<RESOURCE ID="SWarp" name="mosaic_recombined.fits">
  <DESCRIPTION>Data related to SWarp</DESCRIPTION>
  <INFO name="QUERY_STATUS" value="OK" />
  <COOSYS ID="J2000" equinox="J2000" epoch="J2000" system="ICRS"/>
@@ -16,23 +16,28 @@
   <PARAM name="Soft_Auth" datatype="char" arraysize="*" ucd="meta.bib.author;meta.software" value="Emmanuel Bertin"/>
   <PARAM name="Soft_Ref" datatype="char" arraysize="*" ucd="meta.bib.bibcode;meta.software" value="2002ASPC..281..228B"/>
   <PARAM name="NThreads" datatype="int" ucd="meta.number;meta.software" value="20"/>
-  <PARAM name="Date" datatype="char" arraysize="*" ucd="time.event.end;meta.software" value="2025-06-16"/>
-  <PARAM name="Time" datatype="char" arraysize="*" ucd="time.event.end;meta.software" value="11:11:30"/>
-  <PARAM name="Duration" datatype="float" ucd="time.event;meta.software" value="0.41" unit="s"/>
+  <PARAM name="Date" datatype="char" arraysize="*" ucd="time.event.end;meta.software" value="2025-06-27"/>
+  <PARAM name="Time" datatype="char" arraysize="*" ucd="time.event.end;meta.software" value="15:55:33"/>
+  <PARAM name="Duration" datatype="float" ucd="time.event;meta.software" value="0.00" unit="s"/>
   <PARAM name="User" datatype="char" arraysize="*" ucd="meta.curation" value="aellien"/>
   <PARAM name="Host" datatype="char" arraysize="*" ucd="meta.curation" value="(null)"/>
   <PARAM name="Path" datatype="char" arraysize="*" ucd="meta.dataset" value="/home/aellien/Euclid_LSB_DR1/scripts"/>
-  <PARAM name="Image_Name" datatype="char" arraysize="*" ucd="obs.image;meta.fits" value="/home/aellien/Euclid_LSB_DR1/data/IR_EDF_N/mosaic_217GHz.fits"/>
+  <PARAM name="Image_Name" datatype="char" arraysize="*" ucd="obs.image;meta.fits" value="/home/aellien/Euclid_LSB_DR1/data/EUC_EDF_N_bin4_2.5k2/mosaic_recombined.fits"/>
   <PARAM name="Weight_Name" datatype="char" arraysize="*" ucd="obs.image;meta.fits" value="out.weight.fits"/>
-  <PARAM name="NOverlap_Max" datatype="int" ucd="meta.number;stat.max;obs.image" value="6"/>
-  <PARAM name="ExpTime_Max" datatype="float" ucd="time.expo;stat.max;obs.image" value="0" unit="s"/>
-  <PARAM name="Gain_Max" datatype="float" ucd="instr.calib;stat.max;obs.image" value="0" unit="photon/ADU"/>
+
+  <!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+  <!-- !!!!!!!!!!!!!!!!!!!!!! an Error occured !!!!!!!!!!!!!!!!!!!!! -->
+  <!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+  <PARAM name="Error_Msg" datatype="char" arraysize="*" ucd="meta" value="*Error*: /home/aellien/Euclid_LSB_DR1/data/EUC_EDF_N_bin4_2.5k2/EUC_VIS_LSB_ObsID_2681_scaled.cut10.weight.fits not found"/>
+  <!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+  <!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+
   <TABLE ID="Input_Image_Data" name="Input_Image_Data">
    <DESCRIPTION>Data gathered by SWarp for every FITS input image</DESCRIPTION>
    <!-- NFrames may be 0 if an error occurred early in the processing -->
-   <PARAM name="NFrames" datatype="int" ucd="meta.number;meta.dataset" value="17"/>
+   <PARAM name="NFrames" datatype="int" ucd="meta.number;meta.dataset" value="0"/>
    <!-- CurrFrame may differ from NFrames if an error occurred -->
-   <PARAM name="CurrFrame" datatype="int" ucd="meta.number;meta.dataset" value="17"/>
+   <PARAM name="CurrFrame" datatype="int" ucd="meta.number;meta.dataset" value="0"/>
    <FIELD name="Frame_Index" datatype="int" ucd="meta.record"/>
    <FIELD name="Image_Name" datatype="char" arraysize="*" ucd="obs.image;meta.fits"/>
    <FIELD name="Weight_Name" datatype="char" arraysize="*" ucd="obs.image;meta.fits"/>
@@ -66,159 +71,6 @@
    <FIELD name="Epoch" datatype="double" ucd="time.epoch;obs" unit="yr"/>
    <FIELD name="COOSYS" datatype="char" arraysize="*" ucd="meta.code;pos"/>
    <DATA><TABLEDATA>
-    <TR>
-     <TD>1</TD><TD>/home/aellien/Euclid_LSB_DR1/data/IR_EDF_N/PLCK_C263.740+67.980/PLCKI_C263.740+67.980_217GHz.fits</TD><TD>(null)</TD><TD>F</TD><TD>(null)</TD>
-     <TD>0</TD><TD>2025-06-16</TD><TD>11:11:30</TD><TD>0.00</TD>
-     <TD>0.000134406</TD><TD>7.87462e-05</TD><TD>F</TD><TD>AUTO</TD><TD>128</TD><TD>3</TD><TD>0</TD>
-     <TD>NONE</TD><TD>T</TD><TD>0</TD><TD>1</TD><TD>F</TD>
-     <TD>0</TD><TD>50000</TD><TD>0</TD><TD>1</TD>
-     <TD>0.996482</TD><TD>263.7740728 67.99773624</TD><TD>59.8928</TD><TD>0</TD><TD>2000</TD><TD>2000</TD>
-     <TD>xy</TD>
-    </TR>
-    <TR>
-     <TD>2</TD><TD>/home/aellien/Euclid_LSB_DR1/data/IR_EDF_N/PLCK_C264.214+66.028/PLCKI_C264.214+66.028_217GHz.fits</TD><TD>(null)</TD><TD>F</TD><TD>(null)</TD>
-     <TD>0</TD><TD>2025-06-16</TD><TD>11:11:30</TD><TD>0.00</TD>
-     <TD>9.07445e-05</TD><TD>8.49672e-05</TD><TD>F</TD><TD>AUTO</TD><TD>128</TD><TD>3</TD><TD>0</TD>
-     <TD>NONE</TD><TD>F</TD><TD>0</TD><TD>1</TD><TD>F</TD>
-     <TD>0</TD><TD>50000</TD><TD>0</TD><TD>1</TD>
-     <TD>0.998323</TD><TD>264.2509454 66.05017743</TD><TD>59.9496</TD><TD>0</TD><TD>2000</TD><TD>2000</TD>
-     <TD>xy</TD>
-    </TR>
-    <TR>
-     <TD>3</TD><TD>/home/aellien/Euclid_LSB_DR1/data/IR_EDF_N/PLCK_C264.580+64.102/PLCKI_C264.580+64.102_217GHz.fits</TD><TD>(null)</TD><TD>F</TD><TD>(null)</TD>
-     <TD>0</TD><TD>2025-06-16</TD><TD>11:11:30</TD><TD>0.00</TD>
-     <TD>9.42911e-05</TD><TD>8.97272e-05</TD><TD>F</TD><TD>AUTO</TD><TD>128</TD><TD>3</TD><TD>0</TD>
-     <TD>NONE</TD><TD>F</TD><TD>0</TD><TD>1</TD><TD>F</TD>
-     <TD>0</TD><TD>50000</TD><TD>0</TD><TD>1</TD>
-     <TD>0.996684</TD><TD>264.6189437 64.11641853</TD><TD>59.9015</TD><TD>0</TD><TD>2000</TD><TD>2000</TD>
-     <TD>xy</TD>
-    </TR>
-    <TR>
-     <TD>4</TD><TD>/home/aellien/Euclid_LSB_DR1/data/IR_EDF_N/PLCK_C265.261+66.390/PLCKI_C265.261+66.390_217GHz.fits</TD><TD>(null)</TD><TD>F</TD><TD>(null)</TD>
-     <TD>0</TD><TD>2025-06-16</TD><TD>11:11:30</TD><TD>0.00</TD>
-     <TD>9.03844e-05</TD><TD>8.27341e-05</TD><TD>F</TD><TD>AUTO</TD><TD>128</TD><TD>3</TD><TD>0</TD>
-     <TD>NONE</TD><TD>F</TD><TD>0</TD><TD>1</TD><TD>F</TD>
-     <TD>0</TD><TD>50000</TD><TD>0</TD><TD>1</TD>
-     <TD>0.998954</TD><TD>265.2994699 66.40950371</TD><TD>59.9683</TD><TD>0</TD><TD>2000</TD><TD>2000</TD>
-     <TD>xy</TD>
-    </TR>
-    <TR>
-     <TD>5</TD><TD>/home/aellien/Euclid_LSB_DR1/data/IR_EDF_N/PLCK_C265.312+64.433/PLCKI_C265.312+64.433_217GHz.fits</TD><TD>(null)</TD><TD>F</TD><TD>(null)</TD>
-     <TD>0</TD><TD>2025-06-16</TD><TD>11:11:30</TD><TD>0.00</TD>
-     <TD>0.000116017</TD><TD>8.22189e-05</TD><TD>F</TD><TD>AUTO</TD><TD>128</TD><TD>3</TD><TD>0</TD>
-     <TD>NONE</TD><TD>F</TD><TD>0</TD><TD>1</TD><TD>F</TD>
-     <TD>0</TD><TD>50000</TD><TD>0</TD><TD>1</TD>
-     <TD>0.997714</TD><TD>265.3494999 64.44890881</TD><TD>59.9322</TD><TD>0</TD><TD>2000</TD><TD>2000</TD>
-     <TD>xy</TD>
-    </TR>
-    <TR>
-     <TD>6</TD><TD>/home/aellien/Euclid_LSB_DR1/data/IR_EDF_N/PLCK_C265.940+65.990/PLCKI_C265.940+65.990_217GHz.fits</TD><TD>(null)</TD><TD>F</TD><TD>(null)</TD>
-     <TD>0</TD><TD>2025-06-16</TD><TD>11:11:30</TD><TD>0.00</TD>
-     <TD>0.000101936</TD><TD>7.88348e-05</TD><TD>F</TD><TD>AUTO</TD><TD>128</TD><TD>3</TD><TD>0</TD>
-     <TD>NONE</TD><TD>F</TD><TD>0</TD><TD>1</TD><TD>F</TD>
-     <TD>0</TD><TD>50000</TD><TD>0</TD><TD>1</TD>
-     <TD>0.999319</TD><TD>265.9859008 66.00176948</TD><TD>59.9796</TD><TD>0</TD><TD>2000</TD><TD>2000</TD>
-     <TD>xy</TD>
-    </TR>
-    <TR>
-     <TD>7</TD><TD>/home/aellien/Euclid_LSB_DR1/data/IR_EDF_N/PLCK_C268.133+67.901/PLCKI_C268.133+67.901_217GHz.fits</TD><TD>(null)</TD><TD>F</TD><TD>(null)</TD>
-     <TD>0</TD><TD>2025-06-16</TD><TD>11:11:30</TD><TD>0.00</TD>
-     <TD>0.000148793</TD><TD>8.59644e-05</TD><TD>F</TD><TD>AUTO</TD><TD>128</TD><TD>3</TD><TD>0</TD>
-     <TD>NONE</TD><TD>F</TD><TD>0</TD><TD>1</TD><TD>F</TD>
-     <TD>0</TD><TD>50000</TD><TD>0</TD><TD>1</TD>
-     <TD>0.998437</TD><TD>268.1653048 67.92237563</TD><TD>59.9516</TD><TD>0</TD><TD>2000</TD><TD>2000</TD>
-     <TD>xy</TD>
-    </TR>
-    <TR>
-     <TD>8</TD><TD>/home/aellien/Euclid_LSB_DR1/data/IR_EDF_N/PLCK_C268.980+68.100/PLCKI_C268.980+68.100_217GHz.fits</TD><TD>(null)</TD><TD>F</TD><TD>(null)</TD>
-     <TD>0</TD><TD>2025-06-16</TD><TD>11:11:30</TD><TD>0.00</TD>
-     <TD>0.000135229</TD><TD>9.13138e-05</TD><TD>F</TD><TD>AUTO</TD><TD>128</TD><TD>3</TD><TD>0</TD>
-     <TD>NONE</TD><TD>F</TD><TD>0</TD><TD>1</TD><TD>F</TD>
-     <TD>0</TD><TD>50000</TD><TD>0</TD><TD>1</TD>
-     <TD>0.998132</TD><TD>269.0238456 68.11963915</TD><TD>59.9425</TD><TD>0</TD><TD>2000</TD><TD>2000</TD>
-     <TD>xy</TD>
-    </TR>
-    <TR>
-     <TD>9</TD><TD>/home/aellien/Euclid_LSB_DR1/data/IR_EDF_N/PLCK_C269.019+66.114/PLCKI_C269.019+66.114_217GHz.fits</TD><TD>(null)</TD><TD>F</TD><TD>(null)</TD>
-     <TD>0</TD><TD>2025-06-16</TD><TD>11:11:30</TD><TD>0.00</TD>
-     <TD>0.000188318</TD><TD>8.5283e-05</TD><TD>F</TD><TD>AUTO</TD><TD>128</TD><TD>3</TD><TD>0</TD>
-     <TD>NONE</TD><TD>F</TD><TD>0</TD><TD>1</TD><TD>F</TD>
-     <TD>0</TD><TD>50000</TD><TD>0</TD><TD>1</TD>
-     <TD>0.999995</TD><TD>269.0578233 66.12887835</TD><TD>59.9997</TD><TD>0</TD><TD>2000</TD><TD>2000</TD>
-     <TD>xy</TD>
-    </TR>
-    <TR>
-     <TD>10</TD><TD>/home/aellien/Euclid_LSB_DR1/data/IR_EDF_N/PLCK_C269.044+64.181/PLCKI_C269.044+64.181_217GHz.fits</TD><TD>(null)</TD><TD>F</TD><TD>(null)</TD>
-     <TD>0</TD><TD>2025-06-16</TD><TD>11:11:30</TD><TD>0.00</TD>
-     <TD>0.000118438</TD><TD>9.52534e-05</TD><TD>F</TD><TD>AUTO</TD><TD>128</TD><TD>3</TD><TD>0</TD>
-     <TD>NONE</TD><TD>F</TD><TD>0</TD><TD>1</TD><TD>F</TD>
-     <TD>0</TD><TD>50000</TD><TD>0</TD><TD>1</TD>
-     <TD>0.99835</TD><TD>269.0855036 64.19623564</TD><TD>59.9513</TD><TD>0</TD><TD>2000</TD><TD>2000</TD>
-     <TD>xy</TD>
-    </TR>
-    <TR>
-     <TD>11</TD><TD>/home/aellien/Euclid_LSB_DR1/data/IR_EDF_N/PLCK_C269.611+64.777/PLCKI_C269.611+64.777_217GHz.fits</TD><TD>(null)</TD><TD>F</TD><TD>(null)</TD>
-     <TD>0</TD><TD>2025-06-16</TD><TD>11:11:30</TD><TD>0.00</TD>
-     <TD>0.000208945</TD><TD>8.17486e-05</TD><TD>F</TD><TD>AUTO</TD><TD>128</TD><TD>3</TD><TD>0</TD>
-     <TD>NONE</TD><TD>F</TD><TD>0</TD><TD>1</TD><TD>F</TD>
-     <TD>0</TD><TD>50000</TD><TD>0</TD><TD>1</TD>
-     <TD>0.999185</TD><TD>269.6386275 64.79716343</TD><TD>59.9763</TD><TD>0</TD><TD>2000</TD><TD>2000</TD>
-     <TD>xy</TD>
-    </TR>
-    <TR>
-     <TD>12</TD><TD>/home/aellien/Euclid_LSB_DR1/data/IR_EDF_N/PLCK_C271.685+66.267/PLCKI_C271.685+66.267_217GHz.fits</TD><TD>(null)</TD><TD>F</TD><TD>(null)</TD>
-     <TD>0</TD><TD>2025-06-16</TD><TD>11:11:30</TD><TD>0.00</TD>
-     <TD>0.000175227</TD><TD>8.15103e-05</TD><TD>F</TD><TD>AUTO</TD><TD>128</TD><TD>3</TD><TD>0</TD>
-     <TD>NONE</TD><TD>F</TD><TD>0</TD><TD>1</TD><TD>F</TD>
-     <TD>0</TD><TD>50000</TD><TD>0</TD><TD>1</TD>
-     <TD>0.999414</TD><TD>271.7264948 66.28398042</TD><TD>59.9821</TD><TD>0</TD><TD>2000</TD><TD>2000</TD>
-     <TD>xy</TD>
-    </TR>
-    <TR>
-     <TD>13</TD><TD>/home/aellien/Euclid_LSB_DR1/data/IR_EDF_N/PLCK_C271.699+67.891/PLCKI_C271.699+67.891_217GHz.fits</TD><TD>(null)</TD><TD>F</TD><TD>(null)</TD>
-     <TD>0</TD><TD>2025-06-16</TD><TD>11:11:30</TD><TD>0.00</TD>
-     <TD>0.000125068</TD><TD>8.80138e-05</TD><TD>F</TD><TD>AUTO</TD><TD>128</TD><TD>3</TD><TD>0</TD>
-     <TD>NONE</TD><TD>F</TD><TD>0</TD><TD>1</TD><TD>F</TD>
-     <TD>0</TD><TD>50000</TD><TD>0</TD><TD>1</TD>
-     <TD>0.997963</TD><TD>271.7541234 67.90854261</TD><TD>59.9375</TD><TD>0</TD><TD>2000</TD><TD>2000</TD>
-     <TD>xy</TD>
-    </TR>
-    <TR>
-     <TD>14</TD><TD>/home/aellien/Euclid_LSB_DR1/data/IR_EDF_N/PLCK_C272.813+64.751/PLCKI_C272.813+64.751_217GHz.fits</TD><TD>(null)</TD><TD>F</TD><TD>(null)</TD>
-     <TD>0</TD><TD>2025-06-16</TD><TD>11:11:30</TD><TD>0.00</TD>
-     <TD>0.000161239</TD><TD>9.45125e-05</TD><TD>F</TD><TD>AUTO</TD><TD>128</TD><TD>3</TD><TD>0</TD>
-     <TD>NONE</TD><TD>F</TD><TD>0</TD><TD>1</TD><TD>F</TD>
-     <TD>0</TD><TD>50000</TD><TD>0</TD><TD>1</TD>
-     <TD>0.998</TD><TD>272.8436933 64.7644953</TD><TD>59.9404</TD><TD>0</TD><TD>2000</TD><TD>2000</TD>
-     <TD>xy</TD>
-    </TR>
-    <TR>
-     <TD>15</TD><TD>/home/aellien/Euclid_LSB_DR1/data/IR_EDF_N/PLCK_C273.432+64.125/PLCKI_C273.432+64.125_217GHz.fits</TD><TD>(null)</TD><TD>F</TD><TD>(null)</TD>
-     <TD>0</TD><TD>2025-06-16</TD><TD>11:11:30</TD><TD>0.00</TD>
-     <TD>0.000133789</TD><TD>9.39064e-05</TD><TD>F</TD><TD>AUTO</TD><TD>128</TD><TD>3</TD><TD>0</TD>
-     <TD>NONE</TD><TD>F</TD><TD>0</TD><TD>1</TD><TD>F</TD>
-     <TD>0</TD><TD>50000</TD><TD>0</TD><TD>1</TD>
-     <TD>0.996617</TD><TD>273.4602348 64.14169431</TD><TD>59.8994</TD><TD>0</TD><TD>2000</TD><TD>2000</TD>
-     <TD>xy</TD>
-    </TR>
-    <TR>
-     <TD>16</TD><TD>/home/aellien/Euclid_LSB_DR1/data/IR_EDF_N/PLCK_C273.873+66.075/PLCKI_C273.873+66.075_217GHz.fits</TD><TD>(null)</TD><TD>F</TD><TD>(null)</TD>
-     <TD>0</TD><TD>2025-06-16</TD><TD>11:11:30</TD><TD>0.00</TD>
-     <TD>0.000139814</TD><TD>7.4122e-05</TD><TD>F</TD><TD>AUTO</TD><TD>128</TD><TD>3</TD><TD>0</TD>
-     <TD>NONE</TD><TD>F</TD><TD>0</TD><TD>1</TD><TD>F</TD>
-     <TD>0</TD><TD>50000</TD><TD>0</TD><TD>1</TD>
-     <TD>0.998162</TD><TD>273.9122569 66.09008474</TD><TD>59.9446</TD><TD>0</TD><TD>2000</TD><TD>2000</TD>
-     <TD>xy</TD>
-    </TR>
-    <TR>
-     <TD>17</TD><TD>/home/aellien/Euclid_LSB_DR1/data/IR_EDF_N/PLCK_C274.240+68.010/PLCKI_C274.240+68.010_217GHz.fits</TD><TD>(null)</TD><TD>F</TD><TD>(null)</TD>
-     <TD>0</TD><TD>2025-06-16</TD><TD>11:11:30</TD><TD>0.00</TD>
-     <TD>0.000103487</TD><TD>8.9353e-05</TD><TD>F</TD><TD>AUTO</TD><TD>128</TD><TD>3</TD><TD>0</TD>
-     <TD>NONE</TD><TD>F</TD><TD>0</TD><TD>1</TD><TD>F</TD>
-     <TD>0</TD><TD>50000</TD><TD>0</TD><TD>1</TD>
-     <TD>0.996342</TD><TD>274.2808078 68.02439392</TD><TD>59.8891</TD><TD>0</TD><TD>2000</TD><TD>2000</TD>
-     <TD>xy</TD>
-    </TR>
    </TABLEDATA></DATA>
   </TABLE>
   <TABLE ID="Warnings" name="Warnings">
@@ -231,50 +83,8 @@
   </TABLE>
   <RESOURCE ID="Config" name="Config">
    <DESCRIPTION>SWarp configuration</DESCRIPTION>
-   <PARAM name="Command_Line" datatype="char" arraysize="*" ucd="obs.param" value="swarp @/home/aellien/Euclid_LSB_DR1/data/IR_EDF_N/list_217GHz.txt -c IR.swarp -IMAGEOUT_NAME /home/aellien/Euclid_LSB_DR1/data/IR_EDF_N/mosaic_217GHz.fits"/>
+   <PARAM name="Command_Line" datatype="char" arraysize="*" ucd="obs.param" value="swarp @/home/aellien/Euclid_LSB_DR1/data/EUC_EDF_N_bin4_2.5k2/list_cuts.txt -c IR.swarp -IMAGEOUT_NAME /home/aellien/Euclid_LSB_DR1/data/EUC_EDF_N_bin4_2.5k2/mosaic_recombined.fits -WEIGHT_TYPE MAP_WEIGHT"/>
    <PARAM name="Prefs_Name" datatype="char" arraysize="*" ucd="obs.param;meta.file" value="IR.swarp"/>
-   <PARAM name="ImageOut_Name" datatype="char" arraysize="*" ucd="meta.dataset;meta.file" value="/home/aellien/Euclid_LSB_DR1/data/IR_EDF_N/mosaic_217GHz.fits"/>
-   <PARAM name="WeightOut_Name" datatype="char" arraysize="*" ucd="meta.dataset;meta.file" value="out.weight.fits"/>
-   <PARAM name="Header_Only" datatype="boolean" ucd="meta.code;obs.param" value="F"/>
-   <PARAM name="Header_Suffix" datatype="char" arraysize="*" ucd="meta.dataset;meta.file" value=".head"/>
-   <PARAM name="Weight_Suffix" datatype="char" arraysize="*" ucd="meta.dataset;meta.file" value=".weight.fits"/>
-   <PARAM name="Combine" datatype="boolean" ucd="meta.code" value="T"/>
-   <PARAM name="Combine_Type" datatype="char" arraysize="*" ucd="meta.code;obs.param" value="MEDIAN"/>
-   <PARAM name="Blank_BadPixels" datatype="boolean" ucd="meta.code;obs.param" value="F"/>
-   <PARAM name="Celestial_Type" datatype="char" arraysize="*" ucd="meta;pos;obs.param" value="NATIVE"/>
-   <PARAM name="Projection_Type" datatype="char" arraysize="*" ucd="meta;pos;obs.param" value="TAN"/>
-   <PARAM name="Projection_Err" datatype="float" arraysize="1" ucd="pos.angDistance;stat.max;obs.param" value="0.001" unit="pix"/>
-   <PARAM name="Center_Type" datatype="char" arraysize="*" ucd="meta.code;pos;obs.param" value="ALL"/>
-   <PARAM name="Center" datatype="double" arraysize="2" ucd="pos;obs.param" value="    268.9155362     66.06986776" unit="deg"/>
-   <PARAM name="PixelScale_Type" datatype="char" arraysize="*" ucd="meta.code;pos;obs.param" value="MEDIAN"/>
-   <PARAM name="Pixel_Scale" datatype="float" arraysize="1" ucd="instr.scale;instr.pixel;obs.param" value="0"/>
-   <PARAM name="Image_Size" datatype="int" arraysize="1" ucd="instr.scale;instr.pixel;obs.param" value="0"/>
-   <PARAM name="Resample" datatype="boolean" ucd="meta.code" value="T"/>
-   <PARAM name="Resample_Dir" datatype="char" arraysize="*" ucd="meta.dataset" value="."/>
-   <PARAM name="Resample_Suffix" datatype="char" arraysize="*" ucd="meta.dataset;meta.file" value=".resamp.fits"/>
-   <PARAM name="Resampling_Type" datatype="char" arraysize="*" ucd="meta.code;pos;obs.param" value="LANCZOS3"/>
-   <PARAM name="Oversampling" datatype="int" arraysize="1" ucd="arith.factor;instr.pixel;obs.param" value="1"/>
-   <PARAM name="FScalAstro_Type" datatype="char" arraysize="*" ucd="phot.calib;obs.param" value="FIXED"/>
-   <PARAM name="FScale_Keyword" datatype="char" arraysize="*" ucd="meta.code;phot.calib;obs.param" value="FLXSCALE"/>
-   <PARAM name="FScale_Default" datatype="float" ucd="phot.calib;obs.param" value="1"/>
-   <PARAM name="Gain_Keyword" datatype="char" arraysize="*" ucd="meta.code;phot.calib;obs.param" value="GAIN"/>
-   <PARAM name="Gain_Default" datatype="float" ucd="phot.calib;obs.param" value="0"/>
-   <PARAM name="SatLev_Keyword" datatype="char" arraysize="*" ucd="meta.code;instr.saturation;obs.param" value="SATURATE"/>
-   <PARAM name="SatLev_Default" datatype="float" ucd="instr.saturation;obs.param" value="50000"/>
-   <PARAM name="Subtract_Back" datatype="boolean" ucd="meta.code" value="F"/>
-   <PARAM name="Back_Type" datatype="char" arraysize="*" ucd="meta.code;obs.param" value="NONE"/>
-   <PARAM name="Back_Size" datatype="int" ucd="obs.param" value="128"/>
-   <PARAM name="Back_FilterSize" datatype="int" ucd="obs.param" value="3"/>
-   <PARAM name="Back_Default" datatype="float" ucd="obs.param" value="0" unit="adu"/>
-   <PARAM name="Back_FiltThresh" datatype="float" ucd="phot.count;arith.ratio;obs.param" value="0"/>
-   <PARAM name="VMem_Dir" datatype="char" arraysize="*" ucd="meta" value="."/>
-   <PARAM name="VMem_Max" datatype="int" ucd="meta.number;stat.max" value="16000" unit="Mbyte"/>
-   <PARAM name="Mem_Max" datatype="int" ucd="meta.number;stat.max" value="16000" unit="Mbyte"/>
-   <PARAM name="Combine_BufSize" datatype="int" ucd="meta.number;stat.max" value="16000" unit="Mbyte"/>
-   <PARAM name="Delete_TmpFiles" datatype="boolean" ucd="meta.code" value="T"/>
-   <PARAM name="Copy_Keywords" datatype="char" arraysize="*" ucd="meta;meta.fits" value="OBJECT  "/>
-   <PARAM name="Write_FileInfo" datatype="boolean" ucd="meta.code" value="F"/>
-   <PARAM name="Verbose_Type" datatype="char" arraysize="*" ucd="meta.code" value="NORMAL"/>
   </RESOURCE>
  </RESOURCE>
 </RESOURCE>
