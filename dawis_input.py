@@ -21,7 +21,7 @@ scale_lvl_eps = 1 # Scale convergence value with wavelet scale
 max_iter = 1500      # Maximum number of iterations
 
 starting_level = 2 # Starting wavelet scale (this is the third scale - Python convention 0 1 2)
-n_levels = 11    # Number of wavelet scales
+n_levels = 9    # Number of wavelet scales
 min_span = 1    # Minimum of wavelet scales spanned by an interscale tree (must be >= 1)
 max_span = 2    # Maximum number of wavelet scales spanned by an interscale tree
 deblend_contrast = 0.01
