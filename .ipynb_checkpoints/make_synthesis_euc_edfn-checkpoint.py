@@ -114,7 +114,7 @@ if __name__ == '__main__':
 
     # Paths, lists & variables
     path_data = '/n03data/ellien/Euclid_LSB_DR1/data/EUC_EDF_N_bin4_2.5k2/'
-    path_wavelets = '/n08data/ellien/Euclid_LSB_DR1/wavelets/out2/'
+    path_wavelets = '/n08data/ellien/Euclid_LSB_DR1/wavelets/out3/'
         
     # Input files
     cutl = sys.argv[1:]
