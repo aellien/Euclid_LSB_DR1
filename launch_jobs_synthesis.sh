@@ -11,4 +11,5 @@ do
     echo "synthesis image found, passing"
   else
       bash start_synthesis_slurm.sh $n
+  fi
 done
