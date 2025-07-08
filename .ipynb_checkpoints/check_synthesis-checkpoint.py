@@ -11,4 +11,5 @@ for nfp in nfpl:
     hdu = fits.open(nfp)
     recim = hdu[2].data
     if np.mean(recim) == 0.:
-        print(nfp)
+        print('removing %s' %nfp)
+        os.remove(nfp) 
