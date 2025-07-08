@@ -14,6 +14,6 @@ path_wavelets="/home/aellien/Euclid_LSB_DR1/wavelets/out3"
 #    swarp @${path_IR_maps}/list_$filter.txt -c IR.swarp -IMAGEOUT_NAME ${path_IR_maps}/mosaic_$filter.fits
 #done
 
-swarp @${path_wavelets}/list_recim.txt -c IR.swarp -IMAGEOUT_NAME ${path_wavelets}/mosaic_dawis_residuals.fits
+swarp @${path_wavelets}/list_recim.txt -c IR.swarp -IMAGEOUT_NAME ${path_wavelets}/mosaic_dawis_residuals.fits -#WEIGHTOUT_NAME ${path_wavelets}/mosaic_dawis_residuals.weigth.fits
 
 #swarp @${path_data}/EUC_EDF_N_bin4_2.5k2/list_cuts.txt -c IR.swarp -IMAGEOUT_NAME ${path_data}/EUC_EDF_N_bin4_2.5k2/mosaic_recombined.fits -WEIGHT_TYPE MAP_WEIGHT
