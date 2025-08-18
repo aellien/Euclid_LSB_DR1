@@ -1,5 +1,5 @@
 #!/bin/bash
-for file in /n03data/ellien/Euclid_LSB_DR1/data/EUC_EDF_N_bin4_2.5k2/*_scaled.cut*.fits
+for file in /n03data/ellien/Euclid_LSB_DR1/data/EUC_EDF_N_bin4_2.5k2/*2692*_scaled.cut*[1234567890].fits
 do
   echo "Launch synthesis for file ${file}"
   n=$(basename "$file")
