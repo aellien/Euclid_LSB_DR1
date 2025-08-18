@@ -29,7 +29,7 @@ from photutils.segmentation import SourceFinder, SourceCatalog, detect_sources, 
 from photutils.background import Background2D, MedianBackground
 
 #%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-def synthesis_small_sources( id_tile, oim, header, nfwp, lvl_sep, lvl_sep_max, xs, ys, kurt_filt = True, write_fits = True ):
+def synthesis_small_sources( id_tile, oim, mall, mstar, header, nfwp, lvl_sep, lvl_sep_max, xs, ys, kurt_filt = True, write_fits = True ):
 
     # Empty arrays for models
     recim = np.zeros( (xs, ys) )
