@@ -7,7 +7,7 @@ do
 done
 
 # Dawis outputs
-ls /home/aellien/Euclid_LSB_DR1/wavelets/out3/EUC_VIS_LSB_ObsID_*_scaled.cut*.synth.lvl_sep.fits > /home/aellien/Euclid_LSB_DR1/wavelets/out3/list_recim.txt
+ls /home/aellien/Euclid_LSB_DR1/wavelets/out3/EUC_VIS_LSB_ObsID_*_scaled.cut*.synth.lvl_sep.iptd.fits > /home/aellien/Euclid_LSB_DR1/wavelets/out3/list_recim.txt
 
 # cutouts
 ls /home/aellien/Euclid_LSB_DR1/data/EUC_EDF_N_bin4_2.5k2/EUC_VIS_LSB_ObsID_*_scaled.cut*.fits > /home/aellien/Euclid_LSB_DR1/data/EUC_EDF_N_bin4_2.5k2/list_cuts.txt

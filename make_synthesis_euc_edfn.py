@@ -84,8 +84,16 @@ def synthesis_small_sources( id_tile, oim, header, nfwp, lvl_sep, lvl_sep_max, x
                 if (lvlo >= lvl_sep) & (image.max() > 1. ):
                     # avoid reconstruction errors
                     continue
-                elif (lvlo < lvl_sep_max):
+                elif (lvlo <= lvl_sep):
                     recim[ x_min : x_max, y_min : y_max ] += image
+                    continue
+                elif (np.isnan(mall[xco, yco])) & (lvlo <= lvl_sep_max):
+                    recim[ x_min : x_max, y_min : y_max ] += image
+                    continue
+                elif (np.isnan(mstar[xco, yco])) & (lvlo > lvl_sep_max):
+                    recim[ x_min : x_max, y_min : y_max ] += image
+
+                    
 
     # Write synthesized models to disk
     if write_fits == True:
@@ -141,6 +149,7 @@ if __name__ == '__main__':
     
     for cut in cutl:
 
+        # cut
         id_tile = cut.split('_')[4]
         nfp = os.path.join(path_data, cut)
         hdu = fits.open(nfp)
@@ -148,6 +157,22 @@ if __name__ == '__main__':
         oim = hdu[0].data
         print('Reading %s'%nfp)
 
+        # mask all sources
+        mnfp = nfp[-4]+'masked.fits'
+        mhdu = fits.open(mnfp)
+        mall = mhdu[0].data
+        print('Reading %s'%mnfp)
+
+        # mask bright stars
+        mnfp = nfp[-4]+'mstar.fits'
+        if os.path.isfile(mnfp):
+            mhdu = fits.open(mnfp)
+            mstar = mhdu[0].data
+            print('Reading %s'%mnfp)
+        else:
+            mstar = np.zeros(oim.shape)
+        
+        # wavelets
         nfwp = os.path.join(path_wavelets, id_tile, cut[:-5])
         
         xs, ys = oim.shape
@@ -155,7 +180,9 @@ if __name__ == '__main__':
 
         # synthesis
         synthesis_small_sources( id_tile = id_tile,
-                                 oim = oim, 
+                                 oim = oim,
+                                 mall = mall,
+                                 mstar = mstar,
                                  header = head, 
                                  nfwp = nfwp, 
                                  lvl_sep = lvl_sep, 

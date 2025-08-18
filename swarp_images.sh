@@ -1,10 +1,10 @@
 #!/bin/bash
-path_data="/home/aellien/Euclid_LSB_DR1/data"
+path_data="/home/aellien/Euclid_LSB_DR1/data/"
 path_analysis="/home/aellien/Euclid_LSB_DR1/analysis"
 path_IR_maps="/home/aellien/Euclid_LSB_DR1/data/IR_EDF_N"
 path_wavelets="/home/aellien/Euclid_LSB_DR1/wavelets/out3"
 # Euclid
-#swarp @${path_data}/list_tiles.txt -c default.swarp
+swarp @${path_data}/list_tiles.txt -c default.swarp
 #swarp @${path_analysis}/list_scaled.txt -c default.swarp
 
 

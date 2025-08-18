@@ -16,5 +16,5 @@
 /n08data/ellien/Euclid_LSB_DR1/wavelets/out3/2701/EUC_VIS_LSB_ObsID_2701_scaled.cut11.synth.lvl_sep.fits
 /n08data/ellien/Euclid_LSB_DR1/wavelets/out3/2701/EUC_VIS_LSB_ObsID_2701_scaled.cut12.synth.lvl_sep.fits
 /n08data/ellien/Euclid_LSB_DR1/wavelets/out3/2701/EUC_VIS_LSB_ObsID_2701_scaled.cut10.synth.lvl_sep.fits
-/n08data/ellien/Euclid_LSB_DR1/wavelets/out3/2701/EUC_VIS_LSB_ObsID_2701_scaled.cut1.synth.lvl_sep.fits
 /n08data/ellien/Euclid_LSB_DR1/wavelets/out3/2701/EUC_VIS_LSB_ObsID_2701_scaled.cut2.synth.lvl_sep.fits
+/n08data/ellien/Euclid_LSB_DR1/wavelets/out3/2701/EUC_VIS_LSB_ObsID_2701_scaled.cut1.synth.lvl_sep.fits
