@@ -158,13 +158,13 @@ if __name__ == '__main__':
         print('Reading %s'%nfp)
 
         # mask all sources
-        mnfp = nfp[-4]+'masked.fits'
+        mnfp = nfp[:-4]+'masked.fits'
         mhdu = fits.open(mnfp)
         mall = mhdu[0].data
         print('Reading %s'%mnfp)
 
         # mask bright stars
-        mnfp = nfp[-4]+'mstar.fits'
+        mnfp = nfp[:-4]+'mstar.fits'
         if os.path.isfile(mnfp):
             mhdu = fits.open(mnfp)
             mstar = mhdu[0].data
