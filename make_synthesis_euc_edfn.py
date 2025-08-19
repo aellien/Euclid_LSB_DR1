@@ -70,8 +70,8 @@ def synthesis_small_sources( id_tile, oim, mall, mstar, header, nfwp, lvl_sep, l
                     xco = int(c.centroid_quad[0][1] + x_min)
                     yco = int(c.centroid_quad[0][0] + y_min)
                 except:
-                    xco = sx / 2. + x_min
-                    yco = sy / 2. + y_min
+                    xco = int(sx / 2. + x_min)
+                    yco = int(sy / 2. + y_min)
                     
                 # Filter bad atoms/artifacts
                 if kurt_filt == True:
