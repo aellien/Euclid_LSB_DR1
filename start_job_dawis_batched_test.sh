@@ -2,7 +2,7 @@
 
 # Create a temporary file list for this batch
 BATCH_ID=$(date +%s%N | cut -b1-13)  # Unique timestamp
-TEMP_FILE="/tmp/batch_${BATCH_ID}.txt"
+TEMP_FILE="/n03data/ellien/Euclid_LSB_DR1/logs/batch_${BATCH_ID}.txt"
 
 # Write all file arguments to temp file
 for file in "$@"; do
