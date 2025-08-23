@@ -1,10 +1,10 @@
 #!/bin/bash
-
+# /n03data/ellien/Euclid_LSB_DR1/data/EUC_EDF_N_bin4_2.5k2/
 # Create array of all files to process
 FILES=()
 while IFS= read -r -d '' file; do
     FILES+=("$file")
-done < <(find /n03data/ellien/Euclid_LSB_DR1/data/EUC_EDF_N_bin4_2.5k2/ -name "*_scaled.cut*[1234567890].fits" -print0)
+done < <(find /n03data/ellien/Euclid_LSB_DR1/data/test -name "*_scaled.cut*[1234567890].fits" -print0)
 
 echo "Found ${#FILES[@]} files to process"
 
