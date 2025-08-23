@@ -81,10 +81,7 @@ def synthesis_small_sources( id_tile, oim, mall, mstar, header, nfwp, lvl_sep, l
                         continue
 
                 # Add to full reconstructed image of small source
-                if (lvlo >= lvl_sep) & (image.max() > 1. ):
-                    # avoid reconstruction errors
-                    continue
-                elif (lvlo <= lvl_sep):
+                if (lvlo <= lvl_sep):
                     recim[ x_min : x_max, y_min : y_max ] += image
                     continue
                 elif (np.isnan(mall[xco, yco])) & (lvlo <= lvl_sep_max):
@@ -92,8 +89,8 @@ def synthesis_small_sources( id_tile, oim, mall, mstar, header, nfwp, lvl_sep, l
                     continue
                 elif (np.isnan(mstar[xco, yco])) & (lvlo > lvl_sep_max):
                     recim[ x_min : x_max, y_min : y_max ] += image
-
-                    
+                else:
+                    continue
 
     # Write synthesized models to disk
     if write_fits == True:
