@@ -34,7 +34,7 @@ for file in "${FILES[@]}"; do
         if [ ${#batch[@]} -eq $BATCH_SIZE ]; then
             # Launch job for this batch
             echo "Launching batch $((++batch_count)) with ${#batch[@]} files"
-            bash start_batched_job.sh "${batch[@]}"
+            bash start_job_dawis_batched_test.sh "${batch[@]}"
             batch=()
         fi
     else
