@@ -14,7 +14,7 @@ sbatch <<EOT
 #SBATCH --job-name=lsb_dr1_batch
 #SBATCH --nodes=1
 #SBATCH --ntasks-per-node=1
-#SBATCH --cpus-per-task=8
+#SBATCH --cpus-per-task=24
 #SBATCH --time=48:00:00
 #SBATCH --output /n03data/ellien/Euclid_LSB_DR1/logs/%x.%j.batch_${BATCH_ID}.out 
 #SBATCH --error  /n03data/ellien/Euclid_LSB_DR1/logs/%x.%j.batch_${BATCH_ID}.err

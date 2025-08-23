@@ -43,7 +43,7 @@ def main():
     with open(batch_file, 'r') as f:
         filepaths = [line.strip() for line in f if line.strip()]
     
-    print(f"Processing batch of {len(filepaths)} files using 8 cores")
+    print(f"Processing batch of {len(filepaths)} files using Nfiles cores")
     
     # Process files in parallel using 8 cores
     with Pool(processes=8) as pool:

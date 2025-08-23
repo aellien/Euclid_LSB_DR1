@@ -23,7 +23,7 @@ check_if_processed() {
 }
 
 # Create batches of X files (excluding already processed ones)
-BATCH_SIZE=16
+BATCH_SIZE=24
 batch=()
 batch_count=0
 
