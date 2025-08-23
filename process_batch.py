@@ -46,7 +46,7 @@ def main():
     print(f"Processing batch of {len(filepaths)} files using Nfiles cores")
     
     # Process files in parallel using 8 cores
-    with Pool(processes=8) as pool:
+    with Pool(processes=24) as pool:
         results = pool.map(process_single_file, filepaths)
     
     # Summary
