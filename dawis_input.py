@@ -5,10 +5,10 @@ import shutil
 import cProfile
 from datetime import datetime
 
-indir = '/n03data/ellien/Euclid_LSB_DR1/data/EUC_EDF_N_bin4_2.5k2'
+indir = '/n03data/ellien/Euclid_LSB_DR1/data/test'
 infile = sys.argv[1]
 tile_id = infile.split('_')[4]
-outdir = '/n08data/ellien/Euclid_LSB_DR1/wavelets/out3/%s/'%tile_id
+outdir = '/n08data/ellien/Euclid_LSB_DR1/wavelets/out4/%s/'%tile_id
 
 if os.path.isdir( outdir ) == False:
     os.makedirs( outdir, exist_ok = True )
@@ -27,7 +27,7 @@ max_span = 2    # Maximum number of wavelet scales spanned by an interscale tree
 deblend_contrast = 0.01
 lvl_deblend = 2 # Scale at which the regions of significant wavelet coefficients are deblended
 lvl_sep_big = 5     # Scale at wich mix_span, max_span & gamma are set to 1
-lvl_sep_op = 5  # Scale at which synthesis operator switch from SUM to ADJOINT
+lvl_sep_op = 3  # Scale at which synthesis operator switch from SUM to ADJOINT
 rm_gamma_for_big = True # If set to true, the attenuation factor is not applied for scales higher than lvl_sep_big
 
 extent_sep = 0.15   # Ratio n_pix/vignet under which the Haar wavelet is used for restoration
