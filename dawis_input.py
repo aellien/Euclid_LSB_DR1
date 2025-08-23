@@ -16,7 +16,7 @@ if os.path.isdir( outdir ) == False:
 tau = 0.05   # Relative Threshold
 gamma = 0.5   # Attenuation (CLEAN) factor
 
-ceps = 1E-5    # Convergence value for epsilon
+ceps = 1E-3    # Convergence value for epsilon
 scale_lvl_eps = 1 # Scale convergence value with wavelet scale
 max_iter = 1500      # Maximum number of iterations
 
