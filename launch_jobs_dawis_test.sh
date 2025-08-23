@@ -22,8 +22,8 @@ check_if_processed() {
     fi
 }
 
-# Create batches of 8 files (excluding already processed ones)
-BATCH_SIZE=8
+# Create batches of X files (excluding already processed ones)
+BATCH_SIZE=16
 batch=()
 batch_count=0
 
