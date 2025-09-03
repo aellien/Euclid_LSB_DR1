@@ -16,28 +16,28 @@
   <PARAM name="Soft_Auth" datatype="char" arraysize="*" ucd="meta.bib.author;meta.software" value="Emmanuel Bertin"/>
   <PARAM name="Soft_Ref" datatype="char" arraysize="*" ucd="meta.bib.bibcode;meta.software" value="2002ASPC..281..228B"/>
   <PARAM name="NThreads" datatype="int" ucd="meta.number;meta.software" value="20"/>
-  <PARAM name="Date" datatype="char" arraysize="*" ucd="time.event.end;meta.software" value="2025-08-22"/>
-  <PARAM name="Time" datatype="char" arraysize="*" ucd="time.event.end;meta.software" value="17:03:26"/>
-  <PARAM name="Duration" datatype="float" ucd="time.event;meta.software" value="0.00" unit="s"/>
+  <PARAM name="Date" datatype="char" arraysize="*" ucd="time.event.end;meta.software" value="2025-09-03"/>
+  <PARAM name="Time" datatype="char" arraysize="*" ucd="time.event.end;meta.software" value="13:34:52"/>
+  <PARAM name="Duration" datatype="float" ucd="time.event;meta.software" value="182.00" unit="s"/>
   <PARAM name="User" datatype="char" arraysize="*" ucd="meta.curation" value="aellien"/>
   <PARAM name="Host" datatype="char" arraysize="*" ucd="meta.curation" value="(null)"/>
   <PARAM name="Path" datatype="char" arraysize="*" ucd="meta.dataset" value="/home/aellien/Euclid_LSB_DR1/scripts"/>
-  <PARAM name="Image_Name" datatype="char" arraysize="*" ucd="obs.image;meta.fits" value="/home/aellien/Euclid_LSB_DR1/wavelets/out3/mosaic_dawis_residuals.fits"/>
-  <PARAM name="Weight_Name" datatype="char" arraysize="*" ucd="obs.image;meta.fits" value="coadd.weight.fits"/>
+  <PARAM name="Image_Name" datatype="char" arraysize="*" ucd="obs.image;meta.fits" value="/home/aellien/Euclid_LSB_DR1/wavelets/out4/mosaic_dawis_residuals.fits"/>
+  <PARAM name="Weight_Name" datatype="char" arraysize="*" ucd="obs.image;meta.fits" value="out.weight.fits"/>
 
   <!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
   <!-- !!!!!!!!!!!!!!!!!!!!!! an Error occured !!!!!!!!!!!!!!!!!!!!! -->
   <!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
-  <PARAM name="Error_Msg" datatype="char" arraysize="*" ucd="meta" value="*Error*: /home/aellien/Euclid_LSB_DR1/wavelets/out3/mosaic_dawis_residuals1.fits not found"/>
+  <PARAM name="Error_Msg" datatype="char" arraysize="*" ucd="meta" value="*Error* while writing ./EUC_VIS_LSB_ObsID_2718_scaled.cut11.synth.lvl_sep.iptd.resamp.weight.fits"/>
   <!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
   <!-- !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
 
   <TABLE ID="Input_Image_Data" name="Input_Image_Data">
    <DESCRIPTION>Data gathered by SWarp for every FITS input image</DESCRIPTION>
    <!-- NFrames may be 0 if an error occurred early in the processing -->
-   <PARAM name="NFrames" datatype="int" ucd="meta.number;meta.dataset" value="0"/>
+   <PARAM name="NFrames" datatype="int" ucd="meta.number;meta.dataset" value="621"/>
    <!-- CurrFrame may differ from NFrames if an error occurred -->
-   <PARAM name="CurrFrame" datatype="int" ucd="meta.number;meta.dataset" value="0"/>
+   <PARAM name="CurrFrame" datatype="int" ucd="meta.number;meta.dataset" value="533"/>
    <FIELD name="Frame_Index" datatype="int" ucd="meta.record"/>
    <FIELD name="Image_Name" datatype="char" arraysize="*" ucd="obs.image;meta.fits"/>
    <FIELD name="Weight_Name" datatype="char" arraysize="*" ucd="obs.image;meta.fits"/>
@@ -64,28 +64,39 @@
    <FIELD name="ExpTime" datatype="float" ucd="time.expo;obs.image" unit="s"/>
    <FIELD name="Photometric_Flux_Scaling" datatype="float" ucd="phot.calib;obs.image"/>
    <FIELD name="Astrometric_Flux_Scaling" datatype="float" ucd="phot.calib;obs.image"/>
-   <FIELD name="Field_Coordinates" datatype="double" arraysize="2" ucd="pos.eq;obs.image" unit="deg"/>
+   <FIELD name="Field_Coordinates" datatype="double" arraysize="2" ucd="pos.eq;obs.image" unit="pix"/>
    <FIELD name="Pixel_Scale" datatype="float" ucd="instr.pixel;obs.image;stat.mean" unit="arcsec"/>
    <FIELD name="ObsDate" datatype="double" ucd="time.start;obs" unit="yr"/>
    <FIELD name="Equinox" datatype="double" ucd="time.equinox;obs" unit="yr"/>
    <FIELD name="Epoch" datatype="double" ucd="time.epoch;obs" unit="yr"/>
    <FIELD name="COOSYS" datatype="char" arraysize="*" ucd="meta.code;pos"/>
    <DATA><TABLEDATA>
-   </TABLEDATA></DATA>
-  </TABLE>
-  <TABLE ID="Warnings" name="Warnings">
-   <DESCRIPTION>SWarp warnings (limited to the last 1000)</DESCRIPTION>
-   <FIELD name="Date" datatype="char" arraysize="*" ucd="meta;time.event.end"/>
-   <FIELD name="Time" datatype="char" arraysize="*" ucd="meta;time.event.end"/>
-   <FIELD name="Msg" datatype="char" arraysize="*" ucd="meta"/>
-   <DATA><TABLEDATA>
-   </TABLEDATA></DATA>
-  </TABLE>
-  <RESOURCE ID="Config" name="Config">
-   <DESCRIPTION>SWarp configuration</DESCRIPTION>
-   <PARAM name="Command_Line" datatype="char" arraysize="*" ucd="obs.param" value="swarp /home/aellien/Euclid_LSB_DR1/wavelets/out3/mosaic_dawis_residuals1.fits /home/aellien/Euclid_LSB_DR1/wavelets/out3/mosaic_dawis_residuals2.fits /home/aellien/Euclid_LSB_DR1/wavelets/out3/mosaic_dawis_residuals3.fits c IR.swarp -IMAGEOUT_NAME /home/aellien/Euclid_LSB_DR1/wavelets/out3/mosaic_dawis_residuals.fits"/>
-   <PARAM name="Prefs_Name" datatype="char" arraysize="*" ucd="obs.param;meta.file" value="default.swarp"/>
-  </RESOURCE>
- </RESOURCE>
-</RESOURCE>
-</VOTABLE>
+    <TR>
+     <TD>1</TD><TD>/home/aellien/Euclid_LSB_DR1/wavelets/out4/EUC_VIS_LSB_ObsID_2681_scaled.cut10.synth.lvl_sep.iptd.fits</TD><TD>/home/aellien/Euclid_LSB_DR1/data/EUC_EDF_N_bin4_2.5k2/EUC_VIS_LSB_ObsID_2681_scaled.cut10.weight.fits</TD><TD>F</TD><TD>(null)</TD>
+     <TD>0</TD><TD>2025-09-03</TD><TD>13:31:51</TD><TD>0.00</TD>
+     <TD>0.00301142</TD><TD>0.00607213</TD><TD>F</TD><TD>AUTO</TD><TD>128</TD><TD>3</TD><TD>0</TD>
+     <TD>MAP_RMS</TD><TD>T</TD><TD>1e+30</TD><TD>1</TD><TD>F</TD>
+     <TD>0</TD><TD>50000</TD><TD>0</TD><TD>1</TD>
+     <TD>0.997695</TD><TD>264.788973 67.23628667</TD><TD>0.399535</TD><TD>0</TD><TD>2000</TD><TD>2000</TD>
+     <TD>ICRS</TD>
+    </TR>
+    <TR>
+     <TD>2</TD><TD>/home/aellien/Euclid_LSB_DR1/wavelets/out4/EUC_VIS_LSB_ObsID_2681_scaled.cut11.synth.lvl_sep.iptd.fits</TD><TD>/home/aellien/Euclid_LSB_DR1/data/EUC_EDF_N_bin4_2.5k2/EUC_VIS_LSB_ObsID_2681_scaled.cut11.weight.fits</TD><TD>F</TD><TD>(null)</TD>
+     <TD>0</TD><TD>2025-09-03</TD><TD>13:31:51</TD><TD>0.00</TD>
+     <TD>0</TD><TD>1</TD><TD>F</TD><TD>AUTO</TD><TD>128</TD><TD>3</TD><TD>0</TD>
+     <TD>MAP_RMS</TD><TD>T</TD><TD>0</TD><TD>1</TD><TD>F</TD>
+     <TD>0</TD><TD>50000</TD><TD>0</TD><TD>1</TD>
+     <TD>0.997335</TD><TD>264.7840814 67.53066154</TD><TD>0.399463</TD><TD>0</TD><TD>2000</TD><TD>2000</TD>
+     <TD>ICRS</TD>
+    </TR>
+    <TR>
+     <TD>3</TD><TD>/home/aellien/Euclid_LSB_DR1/wavelets/out4/EUC_VIS_LSB_ObsID_2681_scaled.cut12.synth.lvl_sep.iptd.fits</TD><TD>/home/aellien/Euclid_LSB_DR1/data/EUC_EDF_N_bin4_2.5k2/EUC_VIS_LSB_ObsID_2681_scaled.cut12.weight.fits</TD><TD>F</TD><TD>(null)</TD>
+     <TD>0</TD><TD>2025-09-03</TD><TD>13:31:51</TD><TD>0.00</TD>
+     <TD>0</TD><TD>1</TD><TD>F</TD><TD>AUTO</TD><TD>128</TD><TD>3</TD><TD>0</TD>
+     <TD>MAP_RMS</TD><TD>T</TD><TD>0</TD><TD>1</TD><TD>F</TD>
+     <TD>0</TD><TD>50000</TD><TD>0</TD><TD>1</TD>
+     <TD>0.996982</TD><TD>264.7792177 67.820401</TD><TD>0.399376</TD><TD>0</TD><TD>2000</TD><TD>2000</TD>
+     <TD>ICRS</TD>
+    </TR>
+    <TR>
+     <TD>4</TD><TD>/home/aellien/Euclid_LSB_DR1/wavelets/out4/EUC_VIS_LSB_ObsID_2681_scaled.cut13.synth.lvl_sep.iptd.fits</TD><TD>/home/aellien/Euclid_LSB_DR1/data/EUC_EDF_N_bin4_2.5k2/E

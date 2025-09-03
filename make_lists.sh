@@ -11,3 +11,6 @@ ls /home/aellien/Euclid_LSB_DR1/wavelets/out3/EUC_VIS_LSB_ObsID_*_scaled.cut*.sy
 
 # cutouts
 ls /home/aellien/Euclid_LSB_DR1/data/EUC_EDF_N_bin4_2.5k2/EUC_VIS_LSB_ObsID_*_scaled.cut*.fits > /home/aellien/Euclid_LSB_DR1/data/EUC_EDF_N_bin4_2.5k2/list_cuts.txt
+
+# convert list recim to weight recim
+grep -E '^/home/aellien/Euclid_LSB_DR1/wavelets/out4/EUC_VIS_LSB_ObsID_[0-9]+_scaled\.cut[0-9]+\.synth\.lvl_sep\.iptd\.fits$' "list_recim.txt" | sed 's|/wavelets/out4/|/data/EUC_EDF_N_bin4_2.5k2/|g; s|\.synth\.lvl_sep\.iptd\.fits$|.weight.fits|g' > "list_weights.txt"
